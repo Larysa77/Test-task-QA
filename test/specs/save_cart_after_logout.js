@@ -34,7 +34,8 @@ describe('Saving the cart after logout', () => {
 
        
         const logoutButton = await $('#logout_sidebar_link');
-        await logoutButton.click();
+        await logoutButton.click();}
+       )})
 
         
         const loginPage = await $('#login-button');
