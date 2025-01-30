@@ -1,10 +1,13 @@
 {
-  "name": "Project testdriverio",
+  "name": "project-testdriverio",
   "type": "module",
+  "scripts": {
+      "test": "wdio run wdio.conf.js"
+  },
   "devDependencies": {
-    "@wdio/cli": "^9.7.1",
-    "@wdio/local-runner": "^9.7.1",
-    "@wdio/mocha-framework": "^9.6.4",
-    "@wdio/spec-reporter": "^9.6.3"
+      "@wdio/cli": "^9.7.1",
+      "@wdio/local-runner": "^9.7.1",
+      "@wdio/mocha-framework": "^9.6.4",
+      "@wdio/spec-reporter": "^9.6.3"
   }
 }

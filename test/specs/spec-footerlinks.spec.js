@@ -3,7 +3,6 @@ describe('Footer Links functionality', () => {
         
         await browser.url('https://www.saucedemo.com'); 
 
-        
         const loginField = await $('#user-name');
         const passwordField = await $('#password');
         const loginButton = await $('#login-button');
@@ -31,9 +30,9 @@ describe('Footer Links functionality', () => {
 
         
         const url = await browser.getUrl();
-        expect(url).toContain('twitter.com/saucelabs');
+        expect(url).toContain('x.com/saucelabs');
 
-        
+    
         await browser.closeWindow();
         await browser.switchToWindow(currentHandles[0]);
     });
@@ -49,11 +48,11 @@ describe('Footer Links functionality', () => {
         const newHandles = await browser.getWindowHandles();
         await browser.switchToWindow(newHandles[1]);
 
-      
+        
         const url = await browser.getUrl();
         expect(url).toContain('facebook.com/saucelabs');
 
-       
+        
         await browser.closeWindow();
         await browser.switchToWindow(currentHandles[0]);
     });
@@ -64,7 +63,7 @@ describe('Footer Links functionality', () => {
         const currentHandles = await browser.getWindowHandles();
         await linkedinIcon.click();
 
-       
+        
         await browser.waitUntil(async () => (await browser.getWindowHandles()).length > currentHandles.length);
         const newHandles = await browser.getWindowHandles();
         await browser.switchToWindow(newHandles[1]);
@@ -73,4 +72,9 @@ describe('Footer Links functionality', () => {
         const url = await browser.getUrl();
         expect(url).toContain('linkedin.com/company/sauce-labs');
 
-       
+        
+        await browser.closeWindow();
+        await browser.switchToWindow(currentHandles[0]);
+    });
+});
+
